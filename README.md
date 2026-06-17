@@ -5,7 +5,7 @@
 
 [![C++](https://img.shields.io/badge/C++-11-blue?logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Compiler](https://img.shields.io/badge/Compiler-g++-orange?logo=gnu&logoColor=white)](https://gcc.gnu.org/)
-[![Documentation](https://img.shields.io/badge/Docs-Doxygen-green?logo=readthedocs&logoColor=white)](./html/index.html)
+[![Documentation](https://img.shields.io/badge/Docs-Doxygen-green?logo=readthedocs&logoColor=white)](https://ishaaakkk.github.io/PRO2/html/index.html)
 [![Course](https://img.shields.io/badge/Course-PRO2%20·%20FIB%20UPC-red)](https://www.fib.upc.edu/)
 [![License](https://img.shields.io/badge/License-Academic-lightgrey)](./Docs/)
 
@@ -13,7 +13,7 @@
 
 > **Autor / Author:** Ishak Felfoul  
 > **Asignatura / Course:** Programació 2 (PRO2) — Facultat d'Informàtica de Barcelona · UPC  
-> **Documentación / Documentation:** [📚 Ver Doxygen →](./html/index.html)
+> **Documentación / Documentation:** [📚 Ver Doxygen →](https://ishaaakkk.github.io/PRO2/html/index.html)
 
 </div>
 
@@ -57,29 +57,28 @@ Este proyecto aplica los siguientes conceptos clave exigidos por la asignatura:
 ```
 practica/
 │
-├── 📄 program.cc           # Punto de entrada. Bucle principal de lectura de comandos
+├── 📂 src/                 # Código fuente / Source code
+│   ├── 📄 program.cc       # Punto de entrada. Bucle principal de lectura de comandos
+│   ├── 📦 Cuenca.hh/.cc    # Clase principal. Gestiona la cuenca fluvial
+│   ├── 🏙️ Ciudad.hh/.cc    # Representa una ciudad con su inventario
+│   ├── 🚢 Barco.hh/.cc     # Lógica y parámetros del barco
+│   ├── 📦 Productos.hh/.cc # Catálogo global de productos
+│   └── 📄 BinTree.hh       # Árbol binario genérico (FIB UPC)
 │
-├── 📦 Cuenca.hh / .cc      # Clase principal. Gestiona el árbol de ciudades y todas las
-│                           # operaciones sobre la cuenca (leer_rio, redistribuir, hacer_viaje…)
+├── 📂 docs/                # Documentación en PDF / PDF documentation
+│   ├── Enunciado.pdf       # Enunciado oficial de la práctica
+│   ├── Avaluació.pdf       # Criterios de evaluación
+│   └── justificacion_funciones.pdf # Justificación de decisiones de diseño
 │
-├── 🏙️ Ciudad.hh / .cc      # Representa una ciudad con su inventario de productos,
-│                           # peso total y volumen total. Contiene la lógica de comercio bilateral
-│
-├── 🚢 Barco.hh / .cc       # Representa el barco: producto a comprar/vender, cantidades
-│                           # y registro cronológico de ciudades visitadas
-│
-├── 📦 Productos.hh / .cc   # Catálogo global de productos con peso y volumen unitarios
-│
-├── 🔧 Makefile             # Sistema de compilación modular con flags de optimización
+├── 📂 test/                # Juego de pruebas / Test case files
+│   ├── entrada.txt         # Entrada de ejemplo comentada
+│   └── salida_esperada.txt # Salida correcta del programa
 │
 ├── 📂 html/                # Documentación Doxygen generada (HTML navegable)
 │   └── index.html          # Punto de entrada de la documentación
 │
-├── 📂 Docs/
-│   ├── Enunciado.pdf       # Enunciado oficial de la práctica
-│   └── Avaluació de la pràctica de PRO2.pdf  # Criterios de evaluación
-│
-└── 📄 justificacion_funciones.pdf  # Justificación de decisiones de diseño e implementación
+├── 🔧 Makefile             # Sistema de compilación modular con flags de optimización
+└── 📄 README.md            # Este archivo
 ```
 
 #### Relación entre clases
@@ -182,7 +181,7 @@ xdg-open html/index.html        # Linux
 open html/index.html            # macOS
 ```
 
-O directamente en GitHub Pages / el repositorio: **[📚 html/index.html](./html/index.html)**
+O directamente en GitHub Pages: **[📚 Ver documentación en vivo →](https://ishaaakkk.github.io/PRO2/html/index.html)**
 
 ---
 
@@ -260,29 +259,28 @@ The core problem consists of:
 ```
 practica/
 │
-├── 📄 program.cc           # Entry point. Main command-reading loop
+├── 📂 src/                 # Source code
+│   ├── 📄 program.cc       # Entry point. Main command-reading loop
+│   ├── 📦 Cuenca.hh/.cc    # Main class. Manages the basin operations
+│   ├── 🏙️ Ciudad.hh/.cc    # Represents a city with its product inventory
+│   ├── 🚢 Barco.hh/.cc     # Represents the boat and its travel log
+│   ├── 📦 Productos.hh/.cc # Global product catalogue
+│   └── 📄 BinTree.hh       # Generic binary tree (FIB UPC)
 │
-├── 📦 Cuenca.hh / .cc      # Main class. Manages the city tree and all basin operations
-│                           # (leer_rio, redistribuir, hacer_viaje…)
+├── 📂 docs/                # PDF documentation
+│   ├── Enunciado.pdf       # Official assignment statement
+│   ├── Avaluació.pdf       # Evaluation rubric
+│   └── justificacion_funciones.pdf # Implementation decision justification
 │
-├── 🏙️ Ciudad.hh / .cc      # Represents a city with its product inventory,
-│                           # total weight and total volume. Contains bilateral trade logic
-│
-├── 🚢 Barco.hh / .cc       # Represents the boat: product to buy/sell, quantities
-│                           # and chronological log of visited cities
-│
-├── 📦 Productos.hh / .cc   # Global product catalogue with unit weight and volume
-│
-├── 🔧 Makefile             # Modular build system with optimisation flags
+├── 📂 test/                # Test case files
+│   ├── entrada.txt         # Annotated example input
+│   └── salida_esperada.txt # Correct program output
 │
 ├── 📂 html/                # Generated Doxygen documentation (navigable HTML)
 │   └── index.html          # Documentation entry point
 │
-├── 📂 Docs/
-│   ├── Enunciado.pdf       # Official assignment statement
-│   └── Avaluació de la pràctica de PRO2.pdf  # Evaluation rubric
-│
-└── 📄 justificacion_funciones.pdf  # Design and implementation decision justification
+├── 🔧 Makefile             # Modular build system with optimisation flags
+└── 📄 README.md            # This file
 ```
 
 ---
@@ -368,7 +366,7 @@ xdg-open html/index.html        # Linux
 open html/index.html            # macOS
 ```
 
-Or directly in the repository: **[📚 html/index.html](./html/index.html)**
+Or directly via GitHub Pages: **[📚 View live documentation →](https://ishaaakkk.github.io/PRO2/html/index.html)**
 
 ---
 
