@@ -1,0 +1,49 @@
+3
+2 3
+4 1
+1 2
+A B C # # D # # E # #
+1 10 2 5
+leer_inventarios
+B 2
+1 10 5
+2 0 8
+C 2
+1 0 3
+2 7 2
+D 1
+1 5 8
+E 1
+2 3 1
+#
+escribir_barco
+consultar_num
+escribir_producto 1
+escribir_producto 2
+escribir_producto 3
+escribir_ciudad A
+escribir_ciudad B
+escribir_ciudad C
+escribir_ciudad D
+escribir_ciudad E
+comerciar B D
+escribir_ciudad B
+escribir_ciudad D
+redistribuir
+escribir_ciudad A
+escribir_ciudad B
+escribir_ciudad C
+escribir_ciudad D
+escribir_ciudad E
+hacer_viaje
+escribir_barco
+poner_prod A 3 2 4
+escribir_ciudad A
+quitar_prod A 3
+escribir_ciudad A
+modificar_prod B 2 3 6
+escribir_ciudad B
+consultar_prod B 2
+hacer_viaje
+escribir_barco
+fin

@@ -408,6 +408,200 @@ Or directly in the repository: **[📚 html/index.html](./html/index.html)**
 
 ---
 
+### 🧪 Test Case / Juego de Pruebas
+
+Los archivos de ejemplo se encuentran en la carpeta [`test/`](./test/).  
+*The example files are located in the [`test/`](./test/) folder.*
+
+```bash
+# Ejecutar el juego de pruebas / Run the test case
+./program.exe < test/entrada.txt
+
+# Comparar con la salida esperada / Compare against expected output
+./program.exe < test/entrada.txt | diff - test/salida_esperada.txt && echo "OK ✅" || echo "DIFERENCIAS ❌"
+```
+
+#### Estructura de la cuenca / Basin structure
+
+La cuenca tiene **5 ciudades** dispuestas en un árbol binario. A es la desembocadura.  
+*The basin has 5 cities arranged in a binary tree. A is the river mouth.*
+
+```
+          A          ← desembocadura / river mouth
+         / \
+        B   E        ← afluentes / tributaries
+       / \
+      C   D          ← fuentes / sources
+```
+
+> Preorder (formato entrada): `A B C # # D # # E # #`
+
+#### Catálogo de productos / Product catalogue
+
+| ID | Peso / Weight | Volumen / Volume |
+|----|--------------|-----------------|
+| 1  | 2            | 3               |
+| 2  | 4            | 1               |
+| 3  | 1            | 2               |
+
+#### Entrada anotada / Annotated input ([`test/entrada.txt`](./test/entrada.txt))
+
+```
+3                        ← 3 productos
+2 3                      ← prod 1: peso=2, vol=3
+4 1                      ← prod 2: peso=4, vol=1
+1 2                      ← prod 3: peso=1, vol=2
+A B C # # D # # E # #   ← árbol de la cuenca (preorden)
+1 10 2 5                 ← barco: compra prod1(×10), vende prod2(×5)
+
+leer_inventarios         ← carga inventarios de B, C, D, E
+B 2
+  1 10 5                 ←   B tiene 10 de prod1, necesita 5
+  2  0 8                 ←   B tiene  0 de prod2, necesita 8
+C 2
+  1  0 3                 ←   C tiene  0 de prod1, necesita 3
+  2  7 2                 ←   C tiene  7 de prod2, necesita 2
+D 1
+  1  5 8                 ←   D tiene  5 de prod1, necesita 8
+E 1
+  2  3 1                 ←   E tiene  3 de prod2, necesita 1
+#
+
+escribir_barco           ← barco: compra=1×10, vende=2×5
+consultar_num            ← 3 productos en catálogo
+escribir_producto 1      ← prod 1: peso=2, vol=3
+escribir_producto 2      ← prod 2: peso=4, vol=1
+escribir_producto 3      ← prod 3: peso=1, vol=2
+escribir_ciudad A        ← A vacía al inicio
+escribir_ciudad B
+escribir_ciudad C
+escribir_ciudad D
+escribir_ciudad E
+
+comerciar B D            ← B y D comercian entre sí
+escribir_ciudad B
+escribir_ciudad D
+
+redistribuir             ← redistribución global de la cuenca
+escribir_ciudad A
+escribir_ciudad B
+escribir_ciudad C
+escribir_ciudad D
+escribir_ciudad E
+
+hacer_viaje              ← barco hace su ruta óptima
+escribir_barco           ← historial de viajes
+
+poner_prod A 3 2 4       ← añadir prod3 a A (tiene=2, necesita=4)
+escribir_ciudad A
+quitar_prod A 3          ← quitar prod3 de A
+escribir_ciudad A
+modificar_prod B 2 3 6   ← modificar prod2 en B (tiene=3, necesita=6)
+escribir_ciudad B
+consultar_prod B 2       ← consultar estado de prod2 en B
+
+hacer_viaje              ← segundo viaje del barco
+escribir_barco
+
+fin
+```
+
+#### Salida esperada / Expected output ([`test/salida_esperada.txt`](./test/salida_esperada.txt))
+
+```
+#leer_inventarios
+#escribir_barco
+1 10 2 5
+#consultar_num
+3
+#escribir_producto 1
+1 2 3
+#escribir_producto 2
+2 4 1
+#escribir_producto 3
+3 1 2
+#escribir_ciudad A
+0 0
+#escribir_ciudad B
+1 10 5
+2 0 8
+20 30
+#escribir_ciudad C
+1 0 3
+2 7 2
+28 7
+#escribir_ciudad D
+1 5 8
+10 15
+#escribir_ciudad E
+2 3 1
+12 3
+#comerciar B D
+#escribir_ciudad B
+1 7 5
+2 0 8
+14 21
+#escribir_ciudad D
+1 8 8
+16 24
+#redistribuir
+#escribir_ciudad A
+0 0
+#escribir_ciudad B
+1 5 5
+2 5 8
+30 20
+#escribir_ciudad C
+1 2 3
+2 2 2
+12 8
+#escribir_ciudad D
+1 8 8
+16 24
+#escribir_ciudad E
+2 3 1
+12 3
+#hacer_viaje
+3
+#escribir_barco
+1 10 2 5
+B
+#poner_prod A 3
+2 4
+#escribir_ciudad A
+3 2 4
+2 4
+#quitar_prod A 3
+0 0
+#escribir_ciudad A
+0 0
+#modificar_prod B 2
+22 18
+#escribir_ciudad B
+1 5 5
+2 3 6
+22 18
+#consultar_prod B 2
+3 6
+#hacer_viaje
+3
+#escribir_barco
+1 10 2 5
+B
+B
+```
+
+#### Análisis de operaciones clave / Key operation analysis
+
+| Operación | Resultado destacado |
+|-----------|---------------------|
+| `comerciar B D` | B cede 3 unidades de prod1 a D (sobrante B→D), peso B: 20→14 |
+| `redistribuir` | A redistribuye con B y E; B absorbe excedente de C en prod2 |
+| `hacer_viaje` (1º) | Ruta óptima: **A→B** (3 intercambios); el barco compra prod1 de B |
+| `hacer_viaje` (2º) | Ruta óptima: **A→B** de nuevo (3 intercambios); barco visita B otra vez |
+
+---
+
 <div align="center">
 
 *Developed as part of the PRO2 course at FIB — Facultat d'Informàtica de Barcelona · UPC*

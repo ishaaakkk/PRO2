@@ -1,0 +1,80 @@
+#leer_inventarios
+#escribir_barco
+1 10 2 5
+#consultar_num
+3
+#escribir_producto 1
+1 2 3
+#escribir_producto 2
+2 4 1
+#escribir_producto 3
+3 1 2
+#escribir_ciudad A
+0 0
+#escribir_ciudad B
+1 10 5
+2 0 8
+20 30
+#escribir_ciudad C
+1 0 3
+2 7 2
+28 7
+#escribir_ciudad D
+1 5 8
+10 15
+#escribir_ciudad E
+2 3 1
+12 3
+#comerciar B D
+#escribir_ciudad B
+1 7 5
+2 0 8
+14 21
+#escribir_ciudad D
+1 8 8
+16 24
+#redistribuir
+#escribir_ciudad A
+0 0
+#escribir_ciudad B
+1 5 5
+2 5 8
+30 20
+#escribir_ciudad C
+1 2 3
+2 2 2
+12 8
+#escribir_ciudad D
+1 8 8
+16 24
+#escribir_ciudad E
+2 3 1
+12 3
+#hacer_viaje
+3
+#escribir_barco
+1 10 2 5
+B
+#poner_prod A 3
+2 4
+#escribir_ciudad A
+3 2 4
+2 4
+#quitar_prod A 3
+0 0
+#escribir_ciudad A
+0 0
+#modificar_prod B 2
+22 18
+#escribir_ciudad B
+1 5 5
+2 3 6
+22 18
+#consultar_prod B 2
+3 6
+#hacer_viaje
+3
+#escribir_barco
+1 10 2 5
+B
+B
