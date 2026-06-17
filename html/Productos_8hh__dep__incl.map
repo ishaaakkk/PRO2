@@ -1,0 +1,9 @@
+<map id="Productos.hh" name="Productos.hh">
+<area shape="rect" id="node1" title="Especificacion de la clase Productos." alt="" coords="164,5,271,32"/>
+<area shape="rect" id="node2" href="$Ciudad_8hh.html" title="Especificacion de la clase Ciudad." alt="" coords="67,80,154,107"/>
+<area shape="rect" id="node4" href="$Cuenca_8hh.html" title="Especificacion de la clase Cuenca." alt="" coords="115,155,205,181"/>
+<area shape="rect" id="node6" href="$program_8cc.html" title="Programa principal." alt="" coords="195,229,290,256"/>
+<area shape="rect" id="node7" href="$Productos_8cc.html" title="Codigo de la clase Productos." alt="" coords="280,80,384,107"/>
+<area shape="rect" id="node3" href="$Ciudad_8cc.html" title="Codigo de la clase Ciudad." alt="" coords="5,155,91,181"/>
+<area shape="rect" id="node5" href="$Cuenca_8cc.html" title="Codigo de la clase Cuenca." alt="" coords="83,229,171,256"/>
+</map>

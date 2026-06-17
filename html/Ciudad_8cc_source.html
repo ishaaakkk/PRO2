@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ishak Felfoul - Cuenca Fluvial: Fichero Fuente Ciudad.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ishak Felfoul - Cuenca Fluvial
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ciudad.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Ciudad_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Ciudad_8hh.html">Ciudad.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Constructores </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classCiudad.html#a58cb38dda8085e38bb0358ff54ca0e0c">    9</a></span>&#160;<a class="code" href="classCiudad.html#a58cb38dda8085e38bb0358ff54ca0e0c">Ciudad::Ciudad</a>() {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> = <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}             </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Modificadores </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classCiudad.html#a9e4129235f0936c003539bef9f97ae9a">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#a9e4129235f0936c003539bef9f97ae9a">Ciudad::poner_prod</a>(<span class="keywordtype">int</span> id_prod, <span class="keywordtype">int</span> uds_obtenidas, <span class="keywordtype">int</span> uds_necesitadas, <span class="keywordtype">int</span> peso_prod, <span class="keywordtype">int</span> volumen_prod) { </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod] = make_pair(uds_obtenidas, uds_necesitadas);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> += (peso_prod * uds_obtenidas);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> += (volumen_prod * uds_obtenidas);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classCiudad.html#a07a50637cc55da26b50a6ade0c173365">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#a07a50637cc55da26b50a6ade0c173365">Ciudad::modificar_prod</a>(<span class="keywordtype">int</span> id_prod, <span class="keywordtype">int</span> uds_obtenidas, <span class="keywordtype">int</span> uds_necesitadas, <span class="keywordtype">int</span> peso_prod, <span class="keywordtype">int</span> volumen_prod) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> -= (peso_prod * <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].first);                <span class="comment">// Primero restamos la cantidad actual que tenemos de ese producto</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> -= (volumen_prod * <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].first);          <span class="comment">// y luego añadimos la nueva cantidad </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> += (peso_prod * uds_obtenidas);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> += (volumen_prod * uds_obtenidas);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].first = uds_obtenidas;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].second = uds_necesitadas; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classCiudad.html#a482081f62cdca9d7c9055af2ac0ce157">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#a482081f62cdca9d7c9055af2ac0ce157">Ciudad::quitar_prod</a>(<span class="keywordtype">int</span> id_prod, <span class="keywordtype">int</span> peso_prod, <span class="keywordtype">int</span> volumen_prod) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> -= (peso_prod * <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].first);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> -= (volumen_prod * <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>[id_prod].first);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.erase(id_prod);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classCiudad.html#aee9daf9de488dd1210447e9a141f2334">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#aee9daf9de488dd1210447e9a141f2334">Ciudad::reset_inventario</a>() {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.clear();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classCiudad.html#ab3e40814fedab216d6d481c2956335aa">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#ab3e40814fedab216d6d481c2956335aa">Ciudad::comerciar</a>(<a class="code" href="classCiudad.html">Ciudad</a>&amp; ciudad_2, <span class="keyword">const</span> <a class="code" href="classProductos.html">Productos</a>&amp; productos) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    map&lt;int, pair&lt;int, int&gt;&gt;::iterator it1 = this-&gt;<a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.begin();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    map&lt;int, pair&lt;int, int&gt;&gt;::iterator it2 = ciudad_2.<a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.begin();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">while</span> (it1 != this-&gt;<a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.end() and it2 != ciudad_2.<a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.end()) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> id_prod1 = it1-&gt;first;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> id_prod2 = it2-&gt;first;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (id_prod1 &gt; id_prod2) ++it2;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id_prod1 &lt; id_prod2) ++it1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">int</span> sobrante1 = it1-&gt;second.first - it1-&gt;second.second;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordtype">int</span> sobrante2 = it2-&gt;second.first - it2-&gt;second.second;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordtype">int</span> peso_prod = productos.<a class="code" href="classProductos.html#af955377207f840f22c739d225d4d1f35">consultar_peso</a>(id_prod1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">int</span> volumen_prod = productos.<a class="code" href="classProductos.html#ae2b74d11be777da38db279e813dd422f">consultar_volumen</a>(id_prod1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (sobrante1 &gt; 0 and sobrante2 &lt; 0) {              <span class="comment">// solo hacemos intercambio si le sobran productos a la ciudad_1 y necesita productos a la ciudad 2         </span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordtype">int</span> intercambio = min(sobrante1, -sobrante2);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                it1-&gt;second.first -= intercambio;               <span class="comment">// se decrementan las unidades en posesión de la ciudad 1   </span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                it2-&gt;second.first += intercambio;               <span class="comment">// se incrementan las unidades en posesión de la ciudad 2</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="comment">// Actualizar el peso y el volumen total </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                this-&gt;<a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> -= intercambio * peso_prod;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                this-&gt;<a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> -= intercambio * volumen_prod;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                ciudad_2.<a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> += intercambio * peso_prod;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                ciudad_2.<a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> += intercambio * volumen_prod;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sobrante1 &lt; 0 and sobrante2 &gt; 0) {         <span class="comment">// solo hacemos intercambio si necesita productos a la ciudad_1 y le sobran productos a la ciudad 2                 </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordtype">int</span> intercambio = min(-sobrante1, sobrante2);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                it1-&gt;second.first += intercambio;               <span class="comment">// se incrementan las unidades en posesión de la ciudad 1</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                it2-&gt;second.first -= intercambio;               <span class="comment">// se decrementan las unidades en posesión de la ciudad 2</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">// Actualizar el peso y el volumen total </span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                this-&gt;<a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> += intercambio * peso_prod;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                this-&gt;<a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> += intercambio * volumen_prod;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                ciudad_2.<a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> -= intercambio * peso_prod;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                ciudad_2.<a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> -= intercambio * volumen_prod;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            ++it1;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            ++it2;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">// Consultores </span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classCiudad.html#a324076d0213839ed80cd57bfd4b257d1">   94</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCiudad.html#a324076d0213839ed80cd57bfd4b257d1">Ciudad::escribir_ciudad</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    map&lt;int, pair&lt;int, int&gt;&gt;:: const_iterator it = <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.begin();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">while</span> (it != <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.end()) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        cout &lt;&lt; (it-&gt;first) + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; it-&gt;second.first &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; it-&gt;second.second &lt;&lt; endl;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ++it;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    cout &lt;&lt; <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classCiudad.html#ac5e37ea45457dd16b9a3de5600af871c">  103</a></span>&#160;pair&lt;int,int&gt; <a class="code" href="classCiudad.html#ac5e37ea45457dd16b9a3de5600af871c">Ciudad::consultar_prod</a>(<span class="keywordtype">int</span> id_prod)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    map&lt;int, pair&lt;int, int&gt;&gt;::const_iterator it;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    it = <a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.find(id_prod);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    pair&lt;int, int&gt; p = it-&gt;second;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classCiudad.html#a97c522bf6b3aa8d54bc50acef596a9f3">  110</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classCiudad.html#a97c522bf6b3aa8d54bc50acef596a9f3">Ciudad::prod_existe</a>(<span class="keywordtype">int</span> id_prod)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">inventario_productos</a>.count(id_prod) == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classCiudad.html#a7310a627c1dc153e0e057ac2035f9c90">  115</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classCiudad.html#a7310a627c1dc153e0e057ac2035f9c90">Ciudad::peso_total_ciudad</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">peso_total</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classCiudad.html#af0b6003e2f0553e5699f9b13a3cf017d">  119</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classCiudad.html#af0b6003e2f0553e5699f9b13a3cf017d">Ciudad::volumen_total_ciudad</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">volumen_total</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="ttc" id="aCiudad_8hh_html"><div class="ttname"><a href="Ciudad_8hh.html">Ciudad.hh</a></div><div class="ttdoc">Especificacion de la clase Ciudad.</div></div>
+<div class="ttc" id="aclassCiudad_html"><div class="ttname"><a href="classCiudad.html">Ciudad</a></div><div class="ttdoc">Representa una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8hh_source.html#l00028">Ciudad.hh:28</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a07a50637cc55da26b50a6ade0c173365"><div class="ttname"><a href="classCiudad.html#a07a50637cc55da26b50a6ade0c173365">Ciudad::modificar_prod</a></div><div class="ttdeci">void modificar_prod(int id_prod, int uds_obtenidas, int uds_necesitadas, int peso_prod, int volumen_prod)</div><div class="ttdoc">Se modifica la cantidad que tiene y que necesita de un determinado producto.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00021">Ciudad.cc:21</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a324076d0213839ed80cd57bfd4b257d1"><div class="ttname"><a href="classCiudad.html#a324076d0213839ed80cd57bfd4b257d1">Ciudad::escribir_ciudad</a></div><div class="ttdeci">void escribir_ciudad() const</div><div class="ttdoc">Se escribe la ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00094">Ciudad.cc:94</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a482081f62cdca9d7c9055af2ac0ce157"><div class="ttname"><a href="classCiudad.html#a482081f62cdca9d7c9055af2ac0ce157">Ciudad::quitar_prod</a></div><div class="ttdeci">void quitar_prod(int id_prod, int peso_prod, int volumen_prod)</div><div class="ttdoc">Se quitara un producto de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00033">Ciudad.cc:33</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a58cb38dda8085e38bb0358ff54ca0e0c"><div class="ttname"><a href="classCiudad.html#a58cb38dda8085e38bb0358ff54ca0e0c">Ciudad::Ciudad</a></div><div class="ttdeci">Ciudad()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00009">Ciudad.cc:9</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a7310a627c1dc153e0e057ac2035f9c90"><div class="ttname"><a href="classCiudad.html#a7310a627c1dc153e0e057ac2035f9c90">Ciudad::peso_total_ciudad</a></div><div class="ttdeci">int peso_total_ciudad() const</div><div class="ttdoc">Retorna el peso total.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00115">Ciudad.cc:115</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a8f8767e000c1d7e9611bd0299d4942d9"><div class="ttname"><a href="classCiudad.html#a8f8767e000c1d7e9611bd0299d4942d9">Ciudad::volumen_total</a></div><div class="ttdeci">int volumen_total</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8hh_source.html#l00034">Ciudad.hh:34</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a97c522bf6b3aa8d54bc50acef596a9f3"><div class="ttname"><a href="classCiudad.html#a97c522bf6b3aa8d54bc50acef596a9f3">Ciudad::prod_existe</a></div><div class="ttdeci">bool prod_existe(int id_prod) const</div><div class="ttdoc">Devuelve si un producto ya esta en el inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00110">Ciudad.cc:110</a></div></div>
+<div class="ttc" id="aclassCiudad_html_a9e4129235f0936c003539bef9f97ae9a"><div class="ttname"><a href="classCiudad.html#a9e4129235f0936c003539bef9f97ae9a">Ciudad::poner_prod</a></div><div class="ttdeci">void poner_prod(int id_prod, int uds_obtenidas, int uds_necesitadas, int peso_prod, int volumen_prod)</div><div class="ttdoc">Se lee un producto y sus datos y se añade a su respectiva ciudad</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00015">Ciudad.cc:15</a></div></div>
+<div class="ttc" id="aclassCiudad_html_aa0fbe69e619d4ea5de9df22b4a7921c2"><div class="ttname"><a href="classCiudad.html#aa0fbe69e619d4ea5de9df22b4a7921c2">Ciudad::inventario_productos</a></div><div class="ttdeci">map&lt; int, pair&lt; int, int &gt; &gt; inventario_productos</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8hh_source.html#l00031">Ciudad.hh:31</a></div></div>
+<div class="ttc" id="aclassCiudad_html_ab3e40814fedab216d6d481c2956335aa"><div class="ttname"><a href="classCiudad.html#ab3e40814fedab216d6d481c2956335aa">Ciudad::comerciar</a></div><div class="ttdeci">void comerciar(Ciudad &amp;ciudad_2, const Productos &amp;productos)</div><div class="ttdoc">Dos ciudades comercian entre ellas.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00045">Ciudad.cc:45</a></div></div>
+<div class="ttc" id="aclassCiudad_html_ac5e37ea45457dd16b9a3de5600af871c"><div class="ttname"><a href="classCiudad.html#ac5e37ea45457dd16b9a3de5600af871c">Ciudad::consultar_prod</a></div><div class="ttdeci">pair&lt; int, int &gt; consultar_prod(int id_prod) const</div><div class="ttdoc">Se escribe cuantas unidades de ese producto tiene y quiere la ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00103">Ciudad.cc:103</a></div></div>
+<div class="ttc" id="aclassCiudad_html_acca02fdeea122b66162683bdb4a233e0"><div class="ttname"><a href="classCiudad.html#acca02fdeea122b66162683bdb4a233e0">Ciudad::peso_total</a></div><div class="ttdeci">int peso_total</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8hh_source.html#l00033">Ciudad.hh:33</a></div></div>
+<div class="ttc" id="aclassCiudad_html_aee9daf9de488dd1210447e9a141f2334"><div class="ttname"><a href="classCiudad.html#aee9daf9de488dd1210447e9a141f2334">Ciudad::reset_inventario</a></div><div class="ttdeci">void reset_inventario()</div><div class="ttdoc">Se vacia el inventario de productos de la ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00039">Ciudad.cc:39</a></div></div>
+<div class="ttc" id="aclassCiudad_html_af0b6003e2f0553e5699f9b13a3cf017d"><div class="ttname"><a href="classCiudad.html#af0b6003e2f0553e5699f9b13a3cf017d">Ciudad::volumen_total_ciudad</a></div><div class="ttdeci">int volumen_total_ciudad() const</div><div class="ttdoc">Retorna el volumen total.</div><div class="ttdef"><b>Definition:</b> <a href="Ciudad_8cc_source.html#l00119">Ciudad.cc:119</a></div></div>
+<div class="ttc" id="aclassProductos_html"><div class="ttname"><a href="classProductos.html">Productos</a></div><div class="ttdoc">Representa un conjunto de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Productos_8hh_source.html#l00023">Productos.hh:23</a></div></div>
+<div class="ttc" id="aclassProductos_html_ae2b74d11be777da38db279e813dd422f"><div class="ttname"><a href="classProductos.html#ae2b74d11be777da38db279e813dd422f">Productos::consultar_volumen</a></div><div class="ttdeci">int consultar_volumen(int id_prod) const</div><div class="ttdoc">Consulta el volumen de un determinado producto</div><div class="ttdef"><b>Definition:</b> <a href="Productos_8cc_source.html#l00040">Productos.cc:40</a></div></div>
+<div class="ttc" id="aclassProductos_html_af955377207f840f22c739d225d4d1f35"><div class="ttname"><a href="classProductos.html#af955377207f840f22c739d225d4d1f35">Productos::consultar_peso</a></div><div class="ttdeci">int consultar_peso(int id_prod) const</div><div class="ttdoc">Consulta el peso de un determinado producto</div><div class="ttdef"><b>Definition:</b> <a href="Productos_8cc_source.html#l00036">Productos.cc:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
